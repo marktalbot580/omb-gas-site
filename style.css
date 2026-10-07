@@ -120,3 +120,32 @@ dialog#viewer::backdrop{background:rgba(21,25,28,.8)}
 dialog#viewer img{display:block;width:100%;height:auto}
 #vclose{position:sticky;top:0;float:right;margin:8px;z-index:2;font:700 15px "Archivo",sans-serif;background:var(--ink);color:#fff;border:0;border-radius:3px;padding:10px 16px;cursor:pointer}
 @media(max-width:860px){.thumb{height:150px}}
+
+/* phones and desktops: tidy-ups */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.brand{white-space:nowrap}
+.top .btn{white-space:nowrap}
+.top nav a:not(.btn):not(.hide){display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:621px){.top nav a.hide{display:inline-flex;align-items:center;min-height:44px}}
+summary{min-height:48px;align-items:center;padding:6px 0}
+@media(max-width:520px){
+  .top .wrap{min-height:56px}
+  .brand{font-size:21px;gap:8px}
+  .brand img{width:28px;height:28px}
+  .top .btn{font-size:15px;padding:10px 12px}
+  .hero{padding:28px 0 40px}
+  .hero .cta .btn{width:100%;text-align:center}
+  .btn{min-height:48px}
+}
+@media(min-width:1100px){
+  .thumb{height:230px}
+  .thumbs{gap:16px}
+}
+@media(max-width:380px){
+  .brand{font-size:18px;gap:6px}
+  .brand img{width:26px;height:26px}
+  .top .wrap{gap:8px}
+  .top .btn{font-size:14px;padding:10px 10px}
+}
+.brand{min-height:44px}
