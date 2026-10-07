@@ -39,8 +39,13 @@
     </div>
 
     <div>
-      <a class="paper" href="img/form-gas.png" target="_blank" rel="noopener"><img src="img/form-gas.png" width="1521" height="1075" alt="A completed gas safety record PDF with the engineer's business details, appliance checks and signatures"></a>
-      <p class="sheetnote">A gas safety record made by the app. The business and customer are made up. Yours carries your own name and logo.</p>
+      <p class="thumbhead">The paperwork it makes</p>
+      <div class="thumbs">
+        <figure><a class="thumb" href="img/form-gas.png" aria-label="View the gas safety record full size"><img src="img/form-gas.png" width="1521" height="1075" alt="A gas safety record PDF"></a><figcaption>Gas safety record</figcaption></figure>
+        <figure><a class="thumb" href="img/form-service.png" aria-label="View the boiler service record full size"><img src="img/form-service.png" width="1075" height="1521" alt="A boiler service record PDF"></a><figcaption>Boiler service record</figcaption></figure>
+        <figure><a class="thumb" href="img/form-inv.png" aria-label="View the invoice full size"><img src="img/form-inv.png" width="1075" height="1064" alt="An invoice PDF"></a><figcaption>Invoice</figcaption></figure>
+      </div>
+      <p class="sheetnote">Tap one to see it full size. The business and customer are made up. Yours carries your own name and logo.</p>
     </div>
   </div>
 </section>
@@ -71,17 +76,6 @@
       <div><h3>Works with no signal</h3><p>Cellars and plant rooms are fine. Everything works offline and syncs when you are back online. Add it to your home screen and it opens like any other app.</p></div>
       <div><h3>Customers and past jobs</h3><p>Keep your customers and their properties. Open any past job and its PDF again, and copy details from the last visit instead of retyping.</p></div>
       <div><h3>Your records stay yours</h3><p>Save a backup file whenever you like, with a password if you want one. The app reminds you once a month.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="s" id="examples">
-  <div class="wrap">
-    <h2>The paperwork it makes</h2>
-    <p class="exlead">Clean PDFs with your name and logo on, ready to send to the customer. Tap one to see it full size. The details shown are made up.</p>
-    <div class="examples">
-      <figure><a class="paper" href="img/form-service.png" target="_blank" rel="noopener"><img src="img/form-service.png" width="1075" height="1521" alt="A completed gas boiler service record PDF"></a><figcaption>Boiler service record, with flue gas analyser readings.</figcaption></figure>
-      <figure><a class="paper" href="img/form-inv.png" target="_blank" rel="noopener"><img src="img/form-inv.png" width="1075" height="1064" alt="A simple invoice PDF with line items and bank details"></a><figcaption>A simple invoice, made from the finished job with your usual prices already in.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -131,5 +125,12 @@
     <div><a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a> &nbsp; <a href="mailto:support@ombgas.com">support@ombgas.com</a></div>
   </div>
 </footer>
+<dialog id="viewer" aria-label="Form preview"><button type="button" id="vclose" aria-label="Close">Close</button><img id="vimg" alt=""></dialog>
+<script>
+(function(){var d=document.getElementById('viewer'),i=document.getElementById('vimg');if(!d||!d.showModal)return;
+document.querySelectorAll('a.thumb').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();i.src=a.getAttribute('href');i.alt=a.getAttribute('aria-label')||'';d.showModal();d.scrollTop=0;});});
+document.getElementById('vclose').addEventListener('click',function(){d.close();});
+d.addEventListener('click',function(e){if(e.target===d)d.close();});})();
+</script>
 </body>
 </html>
