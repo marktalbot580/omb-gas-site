@@ -100,7 +100,7 @@ dialog#viewer img{display:block;width:100%;height:auto}
 @media(max-width:620px){.points{column-count:1}}
 
 /* screens */
-.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:34px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 28px;margin-top:34px}
 .shot{margin:0}
 .shot figcaption{font-weight:600;font-size:16px;margin:16px 4px 0}
 @media(max-width:760px){.shots{display:flex;overflow-x:auto;gap:18px;padding:4px 2px 18px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}.shot{flex:0 0 250px;scroll-snap-align:start}}
