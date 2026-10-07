@@ -3,216 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OMB Gas Service – certificates and invoices for plumbers and heating engineers</title>
-<meta name="description" content="A no-nonsense app for plumbers and heating engineers. Gas safety records, boiler services, Legionella and air con forms, built-in calculators including the new IGEM/UP/1B tightness test, and simple invoices, with your own logo. £15 a month, 14-day free trial.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="OMB Gas Service – certificates and invoices for plumbers and heating engineers">
-<meta property="og:description" content="Gas safety records, boiler services, Legionella and air con forms, built-in calculators including the new IGEM/UP/1B tightness test, and simple invoices, with your own logo. £15 a month, 14-day free trial.">
-<meta property="og:url" content="https://ombgas.com/">
-<link rel="canonical" href="https://ombgas.com/">
-<meta name="theme-color" content="#0c0e10">
+<meta name="robots" content="noindex">
+<title>OMB Gas Service</title>
 <link rel="icon" href="favicon.png">
-<link rel="apple-touch-icon" href="img/apple-touch.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css">
+<style>
+  :root{color-scheme:dark}
+  html,body{height:100%;margin:0}
+  body{background:#0C0E10;color:#F3EFE6;font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box}
+  img{width:96px;height:96px;border-radius:22px}
+  h1{font-size:28px;margin:18px 0 6px}
+  p{margin:0;color:#B9B4A8}
+  a{color:#E6C778}
+  footer{position:fixed;left:0;right:0;bottom:16px;font-size:14px;color:#8d887c}
+  footer a{color:#8d887c}
+</style>
 </head>
 <body>
-<div class="progress" id="progress" aria-hidden="true"></div>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="./"><svg class="mark sm" viewBox="24 24 72 72" aria-hidden="true" ><g transform="translate(0,8)"><circle class="ring" cx="60" cy="52" r="28" fill="none" stroke="#D9B25F" stroke-width="9"/><path class="fl" fill-rule="evenodd" fill="#D9B25F" d="M60 33C61 41 72 46 72 57C72 64.5 66.5 69.5 60 69.5C53.5 69.5 48 64.5 48 57C48 51.5 51 48 53.5 44.5C54 49 56 51.5 58.5 52C57 45.5 57.5 38.5 60 33ZM60 64.5C57 64.5 55 62.5 55 59.8C55 57.2 57 55.8 58.2 53.5C59.5 55.8 65 57.2 65 59.8C65 62.5 63 64.5 60 64.5Z"/></g></svg>OMB Gas Service</a>
-    <nav aria-label="Main">
-      <a class="hide" href="#forms">Forms</a>
-      <a class="hide" href="#price">Price</a>
-      <a class="hide" href="#faq">Questions</a>
-      <a class="btn" href="https://app.ombgas.com/">Start free trial</a>
-    </nav>
-  </div>
-</header>
-
 <main>
-<section class="hero">
-  <div class="embers" aria-hidden="true"><i style="left:6%;--s:4px;--t:11s;--d:0s"></i><i style="left:14%;--s:3px;--t:9s;--d:2s"></i><i style="left:23%;--s:5px;--t:13s;--d:5s"></i><i style="left:33%;--s:3px;--t:10s;--d:1s"></i><i style="left:42%;--s:4px;--t:12s;--d:7s"></i><i style="left:51%;--s:3px;--t:9s;--d:3s"></i><i style="left:60%;--s:5px;--t:14s;--d:6s"></i><i style="left:68%;--s:3px;--t:10s;--d:0s"></i><i style="left:76%;--s:4px;--t:11s;--d:4s"></i><i style="left:84%;--s:3px;--t:9s;--d:8s"></i><i style="left:91%;--s:5px;--t:13s;--d:2s"></i><i style="left:97%;--s:3px;--t:10s;--d:6s"></i></div>
-  <div class="wrap grid">
-    <div>
-      <p class="pill"><i aria-hidden="true"></i>Works offline, in the van, with no signal</p>
-      <h1>Certificates and invoices. <span class="gold">Nothing else in the way.</span></h1>
-      <p class="lead">A no-nonsense app for plumbers and heating engineers. It produces the right forms, does the sums, and sends simple invoices from your phone.</p>
-      <div class="cta">
-        <a class="btn" href="https://app.ombgas.com/">Start your 14-day free trial</a>
-        <a class="btn alt" href="#forms">See what it does</a>
-      </div>
-      <p class="pricechip"><b>£15</b> a month after the trial. Cancel any time.</p>
-    </div>
-    <div class="visual"><div class="halo"></div>
-      <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="none" stroke="#D9B25F" stroke-width=".6" stroke-dasharray="2 7"/><circle cx="100" cy="100" r="72" fill="none" stroke="#D9B25F" stroke-width=".4" stroke-dasharray="1 5"/></svg>
-      <div class="float"><figure class="phone" id="tilt"><img src="img/shot-1.png" width="750" height="1500" alt="The home screen with buttons for each form and Annual checks due"></figure></div>
-      <svg class="mark big" viewBox="24 24 72 72" aria-hidden="true" ><g transform="translate(0,8)"><circle class="ring" cx="60" cy="52" r="28" fill="none" stroke="#D9B25F" stroke-width="9"/><path class="fl" fill-rule="evenodd" fill="#D9B25F" d="M60 33C61 41 72 46 72 57C72 64.5 66.5 69.5 60 69.5C53.5 69.5 48 64.5 48 57C48 51.5 51 48 53.5 44.5C54 49 56 51.5 58.5 52C57 45.5 57.5 38.5 60 33ZM60 64.5C57 64.5 55 62.5 55 59.8C55 57.2 57 55.8 58.2 53.5C59.5 55.8 65 57.2 65 59.8C65 62.5 63 64.5 60 64.5Z"/></g></svg>
-    </div>
-  </div>
-</section>
-
-<div class="marquee" aria-hidden="true"><div class="mtrack"><span>Gas safety record</span><span>Boiler service record</span><span>Legionella risk assessment</span><span>Air conditioning commissioning</span><span>Warning notice</span><span>Invoices</span><span>Gas rate</span><span>Pipe sizing</span><span>Heat loss</span><span>Tightness test</span><span>Reminders</span><span>Works offline</span><span>Gas safety record</span><span>Boiler service record</span><span>Legionella risk assessment</span><span>Air conditioning commissioning</span><span>Warning notice</span><span>Invoices</span><span>Gas rate</span><span>Pipe sizing</span><span>Heat loss</span><span>Tightness test</span><span>Reminders</span><span>Works offline</span></div></div>
-
-<section class="s" id="paperwork">
-  <div class="wrap">
-    <p class="eyebrow rv">The output</p>
-    <h2 class="rv">The paperwork it makes</h2>
-    <p>Clean, signed PDFs that carry your own name and logo. Tap one to see it full size.</p>
-    <div class="thumbs rv">
-      <figure><a class="thumb" href="img/form-gas.png" aria-label="View the gas safety record full size"><img src="img/form-gas.png" width="1521" height="1075" alt="A gas safety record PDF"></a><figcaption>Gas safety record</figcaption></figure>
-      <figure><a class="thumb" href="img/form-service.png" aria-label="View the boiler service record full size"><img src="img/form-service.png" width="1075" height="1521" alt="A boiler service record PDF"></a><figcaption>Boiler service record</figcaption></figure>
-      <figure><a class="thumb" href="img/form-inv.png" aria-label="View the invoice full size"><img src="img/form-inv.png" width="1075" height="1064" alt="An invoice PDF"></a><figcaption>Invoice</figcaption></figure>
-    </div>
-    <p class="sheetnote">The business and customer shown are made up.</p>
-  </div>
-</section>
-
-<section class="s" id="forms">
-  <div class="wrap two">
-    <div>
-      <p class="eyebrow rv">The forms</p>
-      <h2 class="rv">The forms you actually fill in</h2>
-      <p>Tick everything you are doing at a property today. Enter the customer and address once, and they are used on every form. You get a separate PDF for each.</p>
-    </div>
-    <ul class="forms rv">
-      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Gas safety record</b><span>The landlord gas safety check.</span></div></li>
-      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Boiler service record</b><span>Service or repair of a gas boiler, with flue gas analyser readings.</span></div></li>
-      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Legionella risk assessment</b><span>Hot and cold water system checks.</span></div></li>
-      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Air conditioning commissioning</b><span>Install and commissioning report.</span></div></li>
-      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Warning notice</b><span>Filled in on the spot when a defect needs one.</span></div></li>
-    </ul>
-  </div>
-</section>
-
-<section class="s" id="tools">
-  <div class="wrap">
-    <p class="eyebrow rv">The Tools</p>
-    <h2 class="rv">Four calculators. No second app.</h2>
-    <p class="rv">Everything you would normally switch apps for, built in, and you can show your workings.</p>
-    <div class="toolgrid rv">
-      <div class="tool spot"><h3>Gas rate</h3><p>Time the meter in metric or imperial. Start the timer before you have any readings, then get the gas rate and the gross and net heat input to check against the data plate.</p></div>
-      <div class="tool spot"><h3>Gas pipe sizing</h3><p>Worked out from the published BS 6891 copper pipe capacity table. It also shows how many metres of the bigger pipe you need nearest the meter before the run can drop a size.</p></div>
-      <div class="tool spot"><h3>Heat loss and radiators</h3><p>Go room by room. Radiator sizes change with your flow and return temperatures, so the numbers match the system you are fitting.</p></div>
-      <div class="tool spot hot"><span class="tag">New for October 2026</span><h3>Tightness test volume</h3><p>Works out the installation volume and the pressure drop allowed under the IGEM/UP/1B Edition 4 rules that start on 1 October 2026.</p></div>
-    </div>
-    <ul class="chips rv">
-      <li>Show workings out on every calculator</li>
-      <li>Results carry from one calculator to the next</li>
-      <li>PDF report with the customer’s details at the top. Tick which results go in.</li>
-      <li>Save results on the customer’s card</li>
-      <li>Pin your favourites. Hide the ones you don’t use.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="s">
-  <div class="wrap">
-    <p class="eyebrow rv">How a job runs</p>
-    <h2 class="rv">From the doorstep to paid.</h2>
-    <div class="steps rv">
-      <div class="step spot"><h3>Tick the forms</h3><p>Pick what you are doing today. Customer and address go in once and fill every form.</p></div>
-      <div class="step spot"><h3>Fill it on your phone</h3><p>Readings first, pass or fail after. Calculators, fault photos and your signature are built in.</p></div>
-      <div class="step spot"><h3>Send it all together</h3><p>One PDF per form, plus the invoice, shared from your phone in one go.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="s">
-  <div class="wrap">
-    <p class="eyebrow rv">Built for the van</p>
-    <h2 class="rv">Built for the van, not the office</h2>
-    <div class="points rv">
-      <div><h3>Annual checks due</h3><p>A list of gas safety checks, boiler services and Legionella assessments coming up or overdue. Tap Text, WhatsApp or Email and a ready-written reminder opens on your phone. Nothing is sent until you press send. Mark each one Booked in, Not needed or Stop.</p></div>
-      <div><h3>Simple invoices</h3><p>Make one from a finished job with your standard prices already in. Type a client name and pick them from your saved customers. Add VAT if you charge it, stamp it PAID, and print the bank details on it. Send the PDF, or mark a job as needing no invoice. At each VAT quarter, print a summary for your accountant.</p></div>
-      <div><h3>Fault photos</h3><p>Take a photo of the faulty part on any form. It goes on its own page in the PDF with the fault details underneath, in the same style as the rest.</p></div>
-      <div><h3>Your name on everything</h3><p>Add your logo and business details once. They appear in the app and on every PDF, so the paperwork looks like yours.</p></div>
-      <div><h3>Works with no signal</h3><p>Cellars and plant rooms are fine. Everything works offline and syncs when you are back online. Add it to your home screen and it opens like any other app.</p></div>
-      <div><h3>Reminder emails that send themselves</h3><p>Turn it on and your customers get an email 8 weeks and 2 weeks before their gas safety check, boiler service or Legionella assessment is due. It comes from reminders@ombgas.com with your business name, and their replies go straight to you. Every email has an unsubscribe link, and you can switch it off for any customer.</p></div>
-      <div><h3>Customers and past jobs</h3><p>Keep your customers, with an address and postcode box for each of their properties. Search by name, phone, address, or an invoice or certificate number. Open any past job and its PDF again, and copy details from the last visit instead of retyping.</p></div>
-      <div><h3>Your records stay yours</h3><p>Save a backup file whenever you like, with a password if you want one. Bank details are left out of backups. The app reminds you once a month.</p></div>
-      <div><h3>Help built in</h3><p>A searchable help guide that works offline, a What’s new list for every update, and a Send feedback button for faults, ideas and questions.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="s" id="screens">
-  <div class="wrap">
-    <p class="eyebrow rv">Inside the app</p>
-    <h2 class="rv">What it looks like</h2>
-    <div class="shots rv">
-      <figure class="shot"><div class="phone"><img src="img/shot-1.png" width="750" height="1500" alt="The home screen with buttons for each form and Annual checks due"></div><figcaption>Pick the job. Start the forms.</figcaption></figure>
-      <figure class="shot"><div class="phone"><img src="img/shot-5.png" width="750" height="1500" alt="The Annual checks due list with Text, WhatsApp and Email buttons"></div><figcaption>See who is due. Send the reminder.</figcaption></figure>
-      <figure class="shot"><div class="phone"><img src="img/shot-6.png" width="750" height="1500" alt="The Tools list: gas rate, pipe sizing, tightness test volume and heat loss"></div><figcaption>Every calculator in one place.</figcaption></figure>
-      <figure class="shot"><div class="phone"><img src="img/shot-2.png" width="750" height="1500" alt="The gas rate calculator showing gas rate and gross and net heat input"></div><figcaption>Time the meter. Get the heat input.</figcaption></figure>
-      <figure class="shot"><div class="phone"><img src="img/shot-3.png" width="750" height="1500" alt="Gas pipe sizing showing which copper sizes are big enough"></div><figcaption>Size the pipe. See where it can step down.</figcaption></figure>
-      <figure class="shot"><div class="phone"><img src="img/shot-4.png" width="750" height="1500" alt="The tightness test volume tool showing installation volume"></div><figcaption>Tightness test volume, new regs.</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="s price" id="price" style="border-top:0;padding-top:88px">
-  <div class="wrap">
-    <div class="pricebox rv">
-      <div class="big">£15<small>a month</small></div>
-      <div>
-        <ul>
-          <li>14 days free to try it</li>
-          <li>Every form, calculator and invoice feature</li>
-          <li>Your own logo and details on all your PDFs</li>
-          <li>Cancel any time from Settings</li>
-        </ul>
-        <a class="btn" href="https://app.ombgas.com/">Start your free trial</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="s" id="faq">
-  <div class="wrap">
-    <p class="eyebrow rv">FAQ</p>
-    <h2 class="rv">Questions</h2>
-    <details><summary>What does OMB stand for?</summary><p>One Man Band. It is built for engineers working on their own, with no office staff to do the admin. You do the job, the paperwork and the invoice yourself, so the app keeps that part quick.</p></details>
-    <details><summary>Do I need a signal?</summary><p>No. The forms, calculators and invoices all work offline. Your work syncs to your account when you are back online.</p></details>
-    <details><summary>What phone do I need?</summary><p>Any iPhone or Android phone with a normal browser. Open the app, choose “Add to Home Screen”, and it opens full screen like any other app.</p></details>
-    <details><summary>Can the app remind my customers when their check is due?</summary><p>Yes. Turn on automatic emails in Settings and customers with an email address are emailed about 8 weeks and 2 weeks before. You can switch it off for any customer, and anyone can unsubscribe from the email. The Annual checks due list shows who has been sent a reminder, and gives you ready-written texts and WhatsApps for the rest.</p></details>
-    <details><summary>Can I use it on an iPad?</summary><p>Yes. It runs in the iPad’s browser the same way it does on a phone. The first time, the iPad needs an internet connection to load the app and sign in, either Wi-Fi or tethered to your phone’s hotspot. An iPad with its own SIM card works just like a phone. After that it works offline like it does on your phone.</p></details>
-    <details><summary>Where is my data kept?</summary><p>On your phone first, and backed up to your account whenever you are online. You can also save a backup file yourself at any time.</p></details>
-    <details><summary>Is it approved by the Gas Safe Register?</summary><p>No. OMB Gas Service is independent and is not affiliated with the Gas Safe Register. You are still responsible for the checks you carry out and for what you sign.</p></details>
-    <details><summary>What happens if I cancel?</summary><p>You can cancel any time from Settings. If your subscription ends, you can still view, download and export your records.</p></details>
-    <details><summary>Something is not working, or I have an idea.</summary><p>Use Send feedback in the app’s Settings, or email <a href="mailto:support@ombgas.com">support@ombgas.com</a>.</p></details>
-  </div>
-</section>
+  <img src="img/icon-192.png" alt="">
+  <h1>OMB Gas Service</h1>
+  <p>Back soon.</p>
+  <p style="margin-top:14px">Questions: <a href="mailto:support@ombgas.com">support@ombgas.com</a></p>
 </main>
-
-<footer>
-  <div class="wrap">
-    <div>OMB Gas Service. OMB stands for One Man Band. Not affiliated with the Gas Safe Register.</div>
-    <div><a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a> &nbsp; <a href="mailto:support@ombgas.com">support@ombgas.com</a></div>
-  </div>
-</footer>
-<dialog id="viewer" aria-label="Form preview"><button type="button" id="vclose" aria-label="Close">Close</button><img id="vimg" alt=""></dialog>
-<script>
-(function(){var r=document.documentElement;r.classList.add('js');
-var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var els=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0,rootMargin:'0px 0px -8% 0px'});els.forEach(function(el){io.observe(el);});}else{els.forEach(function(el){el.classList.add('in');});}
-var bar=document.getElementById('progress');
-function sc(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';}
-addEventListener('scroll',sc,{passive:true});sc();
-if(reduce)return;
-document.querySelectorAll('.spot,.points>div,.thumb,.tool').forEach(function(el){el.classList.add('spot');el.addEventListener('pointermove',function(e){var b=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-b.left)+'px');el.style.setProperty('--my',(e.clientY-b.top)+'px');});});
-var t=document.getElementById('tilt'),v=document.querySelector('.visual');
-if(t&&v&&matchMedia('(hover:hover)').matches){v.addEventListener('pointermove',function(e){var b=v.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;t.style.setProperty('--ry',(-6+x*14)+'deg');t.style.setProperty('--rx',(2-y*10)+'deg');});v.addEventListener('pointerleave',function(){t.style.removeProperty('--ry');t.style.removeProperty('--rx');});}
-})();
-</script>
-<script>
-(function(){var d=document.getElementById('viewer'),i=document.getElementById('vimg');if(!d||!d.showModal)return;
-document.querySelectorAll('a.thumb').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();i.src=a.getAttribute('href');i.alt=a.getAttribute('aria-label')||'';d.showModal();d.scrollTop=0;});});
-document.getElementById('vclose').addEventListener('click',function(){d.close();});
-d.addEventListener('click',function(e){if(e.target===d)d.close();});})();
-</script>
+<footer><a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a></footer>
 </body>
 </html>
