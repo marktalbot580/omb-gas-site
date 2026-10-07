@@ -19,9 +19,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="./"><img src="img/mark.svg" alt="" width="34" height="34">OMB Gas Service</a>
+    <a class="brand" href="./"><svg class="mark sm" viewBox="24 24 72 72" aria-hidden="true" ><g transform="translate(0,8)"><circle class="ring" cx="60" cy="52" r="28" fill="none" stroke="#D9B25F" stroke-width="9"/><path class="fl" fill-rule="evenodd" fill="#D9B25F" d="M60 33C61 41 72 46 72 57C72 64.5 66.5 69.5 60 69.5C53.5 69.5 48 64.5 48 57C48 51.5 51 48 53.5 44.5C54 49 56 51.5 58.5 52C57 45.5 57.5 38.5 60 33ZM60 64.5C57 64.5 55 62.5 55 59.8C55 57.2 57 55.8 58.2 53.5C59.5 55.8 65 57.2 65 59.8C65 62.5 63 64.5 60 64.5Z"/></g></svg>OMB Gas Service</a>
     <nav aria-label="Main">
       <a class="hide" href="#forms">Forms</a>
       <a class="hide" href="#price">Price</a>
@@ -33,6 +34,7 @@
 
 <main>
 <section class="hero">
+  <div class="embers" aria-hidden="true"><i style="left:6%;--s:4px;--t:11s;--d:0s"></i><i style="left:14%;--s:3px;--t:9s;--d:2s"></i><i style="left:23%;--s:5px;--t:13s;--d:5s"></i><i style="left:33%;--s:3px;--t:10s;--d:1s"></i><i style="left:42%;--s:4px;--t:12s;--d:7s"></i><i style="left:51%;--s:3px;--t:9s;--d:3s"></i><i style="left:60%;--s:5px;--t:14s;--d:6s"></i><i style="left:68%;--s:3px;--t:10s;--d:0s"></i><i style="left:76%;--s:4px;--t:11s;--d:4s"></i><i style="left:84%;--s:3px;--t:9s;--d:8s"></i><i style="left:91%;--s:5px;--t:13s;--d:2s"></i><i style="left:97%;--s:3px;--t:10s;--d:6s"></i></div>
   <div class="wrap grid">
     <div>
       <p class="pill"><i aria-hidden="true"></i>Works offline, in the van, with no signal</p>
@@ -44,16 +46,22 @@
       </div>
       <p class="pricechip"><b>£15</b> a month after the trial. Cancel any time.</p>
     </div>
-    <figure class="phone"><img src="img/shot-1.png" width="750" height="1500" alt="The records screen with buttons to start each type of form"></figure>
+    <div class="visual"><div class="halo"></div>
+      <svg class="orbit" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="none" stroke="#D9B25F" stroke-width=".6" stroke-dasharray="2 7"/><circle cx="100" cy="100" r="72" fill="none" stroke="#D9B25F" stroke-width=".4" stroke-dasharray="1 5"/></svg>
+      <div class="float"><figure class="phone" id="tilt"><img src="img/shot-1.png" width="750" height="1500" alt="The records screen with buttons to start each type of form"></figure></div>
+      <svg class="mark big" viewBox="24 24 72 72" aria-hidden="true" ><g transform="translate(0,8)"><circle class="ring" cx="60" cy="52" r="28" fill="none" stroke="#D9B25F" stroke-width="9"/><path class="fl" fill-rule="evenodd" fill="#D9B25F" d="M60 33C61 41 72 46 72 57C72 64.5 66.5 69.5 60 69.5C53.5 69.5 48 64.5 48 57C48 51.5 51 48 53.5 44.5C54 49 56 51.5 58.5 52C57 45.5 57.5 38.5 60 33ZM60 64.5C57 64.5 55 62.5 55 59.8C55 57.2 57 55.8 58.2 53.5C59.5 55.8 65 57.2 65 59.8C65 62.5 63 64.5 60 64.5Z"/></g></svg>
+    </div>
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true"><div class="mtrack"><span>Gas safety record</span><span>Boiler service record</span><span>Legionella risk assessment</span><span>Air conditioning commissioning</span><span>Warning notice</span><span>Invoices</span><span>Reminders</span><span>Works offline</span><span>Gas safety record</span><span>Boiler service record</span><span>Legionella risk assessment</span><span>Air conditioning commissioning</span><span>Warning notice</span><span>Invoices</span><span>Reminders</span><span>Works offline</span></div></div>
+
 <section class="s" id="paperwork">
   <div class="wrap">
-    <p class="eyebrow">The output</p>
-    <h2>The paperwork it makes</h2>
+    <p class="eyebrow rv">The output</p>
+    <h2 class="rv">The paperwork it makes</h2>
     <p>Clean, signed PDFs that carry your own name and logo. Tap one to see it full size.</p>
-    <div class="thumbs">
+    <div class="thumbs rv">
       <figure><a class="thumb" href="img/form-gas.png" aria-label="View the gas safety record full size"><img src="img/form-gas.png" width="1521" height="1075" alt="A gas safety record PDF"></a><figcaption>Gas safety record</figcaption></figure>
       <figure><a class="thumb" href="img/form-service.png" aria-label="View the boiler service record full size"><img src="img/form-service.png" width="1075" height="1521" alt="A boiler service record PDF"></a><figcaption>Boiler service record</figcaption></figure>
       <figure><a class="thumb" href="img/form-inv.png" aria-label="View the invoice full size"><img src="img/form-inv.png" width="1075" height="1064" alt="An invoice PDF"></a><figcaption>Invoice</figcaption></figure>
@@ -65,37 +73,37 @@
 <section class="s" id="forms">
   <div class="wrap two">
     <div>
-      <p class="eyebrow">The forms</p>
-      <h2>The forms you actually fill in</h2>
+      <p class="eyebrow rv">The forms</p>
+      <h2 class="rv">The forms you actually fill in</h2>
       <p>Tick everything you are doing at a property today. Enter the customer and address once, and they are used on every form. You get a separate PDF for each.</p>
     </div>
-    <ul class="forms">
-      <li><span class="tick" aria-hidden="true"></span><div><b>Gas safety record</b><span>The landlord gas safety check.</span></div></li>
-      <li><span class="tick" aria-hidden="true"></span><div><b>Boiler service record</b><span>Service or repair of a gas boiler, with flue gas analyser readings.</span></div></li>
-      <li><span class="tick" aria-hidden="true"></span><div><b>Legionella risk assessment</b><span>Hot and cold water system checks.</span></div></li>
-      <li><span class="tick" aria-hidden="true"></span><div><b>Air conditioning commissioning</b><span>Install and commissioning report.</span></div></li>
-      <li><span class="tick" aria-hidden="true"></span><div><b>Warning notice</b><span>Filled in on the spot when a defect needs one.</span></div></li>
+    <ul class="forms rv">
+      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Gas safety record</b><span>The landlord gas safety check.</span></div></li>
+      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Boiler service record</b><span>Service or repair of a gas boiler, with flue gas analyser readings.</span></div></li>
+      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Legionella risk assessment</b><span>Hot and cold water system checks.</span></div></li>
+      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Air conditioning commissioning</b><span>Install and commissioning report.</span></div></li>
+      <li class="spot"><span class="tick" aria-hidden="true"></span><div><b>Warning notice</b><span>Filled in on the spot when a defect needs one.</span></div></li>
     </ul>
   </div>
 </section>
 
 <section class="s">
   <div class="wrap">
-    <p class="eyebrow">How a job runs</p>
-    <h2>From the doorstep to paid.</h2>
-    <div class="steps">
-      <div class="step"><h3>Tick the forms</h3><p>Pick what you are doing today. Customer and address go in once and fill every form.</p></div>
-      <div class="step"><h3>Fill it on your phone</h3><p>Readings first, pass or fail after. Calculators, fault photos and your signature are built in.</p></div>
-      <div class="step"><h3>Send it all together</h3><p>One PDF per form, plus the invoice, shared from your phone in one go.</p></div>
+    <p class="eyebrow rv">How a job runs</p>
+    <h2 class="rv">From the doorstep to paid.</h2>
+    <div class="steps rv">
+      <div class="step spot"><h3>Tick the forms</h3><p>Pick what you are doing today. Customer and address go in once and fill every form.</p></div>
+      <div class="step spot"><h3>Fill it on your phone</h3><p>Readings first, pass or fail after. Calculators, fault photos and your signature are built in.</p></div>
+      <div class="step spot"><h3>Send it all together</h3><p>One PDF per form, plus the invoice, shared from your phone in one go.</p></div>
     </div>
   </div>
 </section>
 
 <section class="s">
   <div class="wrap">
-    <p class="eyebrow">Built for the van</p>
-    <h2>Built for the van, not the office</h2>
-    <div class="points">
+    <p class="eyebrow rv">Built for the van</p>
+    <h2 class="rv">Built for the van, not the office</h2>
+    <div class="points rv">
       <div><h3>Calculators built in</h3><p>A gas rate calculator for timed meter tests, metric or imperial, with gross and net heat input to check against the data plate. A Tools section also has gas pipe sizing and a room-by-room heat loss calculator, with radiator sizes that change with your flow and return temperatures.</p></div>
       <div><h3>Simple invoices</h3><p>Make one from a finished job with your standard prices already in. Type a client name and pick them from your saved customers. Send the PDF, mark it sent and paid, and print a summary for your accountant.</p></div>
       <div><h3>Your name on everything</h3><p>Add your logo and business details once. They appear in the app and on every PDF, so the paperwork looks like yours.</p></div>
@@ -109,9 +117,9 @@
 
 <section class="s" id="screens">
   <div class="wrap">
-    <p class="eyebrow">Inside the app</p>
-    <h2>What it looks like</h2>
-    <div class="shots">
+    <p class="eyebrow rv">Inside the app</p>
+    <h2 class="rv">What it looks like</h2>
+    <div class="shots rv">
       <figure class="shot"><div class="phone"><img src="img/shot-1.png" width="750" height="1500" alt="The records screen with buttons to start each type of form"></div><figcaption>Pick the job. Start the forms.</figcaption></figure>
       <figure class="shot"><div class="phone"><img src="img/shot-2.png" width="750" height="1500" alt="The gas rate calculator showing gross and net heat input"></div><figcaption>Time the meter. Get the heat input.</figcaption></figure>
       <figure class="shot"><div class="phone"><img src="img/shot-3.png" width="750" height="1500" alt="An invoice being created with a client suggested as you type"></div><figcaption>Type a name. Pick the customer.</figcaption></figure>
@@ -121,7 +129,7 @@
 
 <section class="s price" id="price" style="border-top:0;padding-top:88px">
   <div class="wrap">
-    <div class="pricebox">
+    <div class="pricebox rv">
       <div class="big">£15<small>a month</small></div>
       <div>
         <ul>
@@ -138,8 +146,8 @@
 
 <section class="s" id="faq">
   <div class="wrap">
-    <p class="eyebrow">FAQ</p>
-    <h2>Questions</h2>
+    <p class="eyebrow rv">FAQ</p>
+    <h2 class="rv">Questions</h2>
     <details><summary>Do I need a signal?</summary><p>No. The forms, calculators and invoices all work offline. Your work syncs to your account when you are back online.</p></details>
     <details><summary>What phone do I need?</summary><p>Any iPhone or Android phone with a normal browser. Open the app, choose “Add to Home Screen”, and it opens full screen like any other app.</p></details>
     <details><summary>Can the app remind my customers when their check is due?</summary><p>Yes. Turn on automatic emails in Settings and customers with an email address are emailed about 8 weeks and 2 weeks before. You can switch it off for any customer, and anyone can unsubscribe from the email. The Annual checks due list shows who has been sent a reminder, and gives you ready-written texts and WhatsApps for the rest.</p></details>
@@ -158,6 +166,20 @@
   </div>
 </footer>
 <dialog id="viewer" aria-label="Form preview"><button type="button" id="vclose" aria-label="Close">Close</button><img id="vimg" alt=""></dialog>
+<script>
+(function(){var r=document.documentElement;r.classList.add('js');
+var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(el){io.observe(el);});}else{els.forEach(function(el){el.classList.add('in');});}
+var bar=document.getElementById('progress');
+function sc(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';}
+addEventListener('scroll',sc,{passive:true});sc();
+if(reduce)return;
+document.querySelectorAll('.spot,.points>div,.thumb').forEach(function(el){el.classList.add('spot');el.addEventListener('pointermove',function(e){var b=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-b.left)+'px');el.style.setProperty('--my',(e.clientY-b.top)+'px');});});
+var t=document.getElementById('tilt'),v=document.querySelector('.visual');
+if(t&&v&&matchMedia('(hover:hover)').matches){v.addEventListener('pointermove',function(e){var b=v.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;t.style.setProperty('--ry',(-6+x*14)+'deg');t.style.setProperty('--rx',(2-y*10)+'deg');});v.addEventListener('pointerleave',function(){t.style.removeProperty('--ry');t.style.removeProperty('--rx');});}
+})();
+</script>
 <script>
 (function(){var d=document.getElementById('viewer'),i=document.getElementById('vimg');if(!d||!d.showModal)return;
 document.querySelectorAll('a.thumb').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();i.src=a.getAttribute('href');i.alt=a.getAttribute('aria-label')||'';d.showModal();d.scrollTop=0;});});

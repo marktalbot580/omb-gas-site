@@ -148,3 +148,103 @@ footer a:hover{color:var(--gold2)}
   .btn{min-height:50px}
 }
 @media(max-width:380px){.brand{font-size:16px}.top .btn{padding:0 10px}}
+
+/* ===== motion and modern polish ===== */
+/* animated flame */
+.mark{display:block;overflow:visible;filter:drop-shadow(0 0 6px rgba(217,178,95,.35));animation:glow 3s ease-in-out infinite alternate}
+.mark.sm{width:34px;height:34px}
+.mark .fl{transform-box:fill-box;transform-origin:50% 100%;animation:flick 2.6s ease-in-out infinite}
+@keyframes flick{0%{transform:scale(1,1) rotate(0)}22%{transform:scale(.95,1.06) rotate(-2.5deg)}48%{transform:scale(1.04,.97) rotate(1.8deg)}74%{transform:scale(.97,1.07) rotate(-1.2deg)}100%{transform:scale(1,1) rotate(0)}}
+@keyframes glow{to{filter:drop-shadow(0 0 16px rgba(217,178,95,.75))}}
+.brand .mark{transition:transform .3s}
+.brand:hover .mark{transform:scale(1.12)}
+
+/* hero visual */
+.visual{position:relative;justify-self:center;width:100%;max-width:420px;display:flex;justify-content:center;align-items:center}
+.halo{position:absolute;inset:-12%;background:radial-gradient(closest-side,rgba(217,178,95,.26),transparent 72%);animation:breathe 5s ease-in-out infinite alternate;pointer-events:none}
+@keyframes breathe{from{opacity:.55;transform:scale(.94)}to{opacity:1;transform:scale(1.06)}}
+.orbit{position:absolute;left:50%;top:50%;width:132%;aspect-ratio:1;margin:0;transform:translate(-50%,-50%);animation:spin 70s linear infinite;opacity:.55;pointer-events:none}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.float{animation:bob 7s ease-in-out infinite;position:relative;perspective:1000px;width:100%;max-width:340px}
+@keyframes bob{50%{transform:translateY(-14px)}}
+.hero .phone{max-width:340px;transform:rotateY(var(--ry,-7deg)) rotateX(var(--rx,2deg)) rotateZ(1.5deg);transition:transform .25s ease-out;will-change:transform}
+.mark.big{position:absolute;left:-14px;bottom:70px;width:104px;height:104px;z-index:2;animation:glow 3s ease-in-out infinite alternate,bob 6s ease-in-out infinite reverse;background:rgba(12,14,16,.85);border:1px solid var(--line2);border-radius:28px;padding:16px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+@media(max-width:900px){.mark.big{left:2px;bottom:40px;width:84px;height:84px;padding:12px;border-radius:22px}.orbit{width:112%}}
+
+/* gradient headline accent */
+.hero h1 .gold{background:linear-gradient(100deg,#c9a24b 10%,#f3dc9c 45%,#c9a24b 80%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shine 6s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+
+/* load-in */
+.hero .pill,.hero h1,.hero p.lead,.hero .cta,.hero .pricechip{opacity:0;animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .pill{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero p.lead{animation-delay:.3s}.hero .cta{animation-delay:.42s}.hero .pricechip{animation-delay:.54s}
+.hero .visual{opacity:0;animation:rise 1s .25s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.pill i{animation:ping 2s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(61,220,151,.6)}100%{box-shadow:0 0 0 10px rgba(61,220,151,0)}}
+
+/* embers */
+.embers{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.embers i{position:absolute;bottom:-10px;width:var(--s);height:var(--s);border-radius:50%;background:var(--gold2);opacity:0;box-shadow:0 0 10px 2px rgba(217,178,95,.6);animation:ember var(--t) linear var(--d) infinite}
+@keyframes ember{0%{transform:translate(0,0);opacity:0}10%{opacity:.8}80%{opacity:.25}100%{transform:translate(24px,-640px);opacity:0}}
+
+/* marquee */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mtrack{display:flex;width:max-content;animation:marq 38s linear infinite}
+.marquee:hover .mtrack{animation-play-state:paused}
+.mtrack span{font:500 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);padding:22px 28px;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.mtrack span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* scroll reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .steps.rv>*,.js .points.rv>*,.js .thumbs.rv>*,.js .shots.rv>*,.js .forms.rv>*{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in>*{opacity:1;transform:none}
+.js .rv.in>*:nth-child(2){transition-delay:.09s}.js .rv.in>*:nth-child(3){transition-delay:.18s}.js .rv.in>*:nth-child(4){transition-delay:.27s}.js .rv.in>*:nth-child(5){transition-delay:.36s}.js .rv.in>*:nth-child(6){transition-delay:.45s}.js .rv.in>*:nth-child(7){transition-delay:.54s}
+
+/* cursor spotlight on cards */
+.spot{position:relative;overflow:hidden}
+.spot::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--mx,50%) var(--my,-60%),rgba(217,178,95,.14),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none;z-index:0}
+.spot:hover::before{opacity:1}
+.points>div,.step{transition:border-color .3s,transform .3s}
+.points>div:hover,.step:hover{border-color:#6a5a2c;transform:translateY(-3px)}
+.thumb.spot{overflow:hidden}
+.shot .phone{transition:transform .35s,border-color .35s}
+.shot:hover .phone{transform:translateY(-8px);border-color:var(--gold)}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:60;background:linear-gradient(90deg,var(--gold),var(--gold2));transform-origin:0 50%;transform:scaleX(0)}
+.btn{position:relative;overflow:hidden}
+.btn:not(.alt)::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:sweep 5s ease-in-out 1.5s infinite}
+@keyframes sweep{0%,60%{left:-60%}100%{left:130%}}
+
+@media(prefers-reduced-motion:reduce){
+  .mark,.mark .fl,.halo,.orbit,.float,.mark.big,.hero h1 .gold,.pill i,.embers i,.mtrack,.btn::after{animation:none!important}
+  .hero .pill,.hero h1,.hero p.lead,.hero .cta,.hero .pricechip,.hero .visual{opacity:1;animation:none}
+  .js .rv,.js .rv>*{opacity:1!important;transform:none!important}
+  .progress{display:none}
+}
+
+/* mobile and tablet tuning */
+@media(max-width:900px){
+  .embers i:nth-child(n+7){display:none}
+  .marquee .mtrack span{padding:18px 20px;gap:40px}
+  .halo{inset:-4%}
+  .float{max-width:280px}
+}
+@media(max-width:520px){
+  .hero{padding:32px 0 44px}
+  .hero h1{font-size:clamp(38px,11.5vw,52px)}
+  .hero p.lead{font-size:18px;margin:18px 0 24px}
+  .pricechip{margin-top:20px}
+  .visual{max-width:300px}
+  .pill{font-size:13px}
+  .thumb.spot::before,.points>div::before{display:none}
+  .points>div,.step{padding:22px}
+  .pricebox{border-radius:22px}
+  .price .big{font-size:96px}
+  summary{font-size:18px}
+}
+@media(hover:none){.spot::before{display:none}.points>div:hover,.step:hover,.shot:hover .phone{transform:none}}
+@media(min-width:1500px){:root{--w:1240px}h1{font-size:92px}}
