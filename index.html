@@ -170,7 +170,7 @@
 (function(){var r=document.documentElement;r.classList.add('js');
 var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var els=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -6% 0px'});els.forEach(function(el){io.observe(el);});}else{els.forEach(function(el){el.classList.add('in');});}
+if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0,rootMargin:'0px 0px -8% 0px'});els.forEach(function(el){io.observe(el);});}else{els.forEach(function(el){el.classList.add('in');});}
 var bar=document.getElementById('progress');
 function sc(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';}
 addEventListener('scroll',sc,{passive:true});sc();
