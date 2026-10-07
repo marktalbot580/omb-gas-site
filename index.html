@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMB Gas Service – certificates and invoices for plumbers and heating engineers</title>
+<meta name="description" content="A no-nonsense app for plumbers and heating engineers. Gas safety records, boiler services, Legionella and air con forms, built-in calculators and simple invoices, with your own logo. £15 a month, 14-day free trial.">
+<meta name="theme-color" content="#15191c">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon-192.png" alt="">OMB Gas Service</a>
+    <nav aria-label="Main">
+      <a class="hide" href="#forms">Forms</a>
+      <a class="hide" href="#price">Price</a>
+      <a class="hide" href="#faq">Questions</a>
+      <a class="btn" href="https://app.ombgas.com/">Start free trial</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1>Certificates and invoices. Nothing else in the way.</h1>
+      <p class="lead">A no-nonsense app for plumbers and heating engineers. It produces the right forms, does the sums, and sends simple invoices from your phone.</p>
+      <div class="cta">
+        <a class="btn" href="https://app.ombgas.com/">Start your 14-day free trial</a>
+        <a class="btn alt" href="#forms">See what it does</a>
+      </div>
+      <p class="fine">Then £15 a month. Cancel any time.</p>
+    </div>
+
+    <div>
+      <div class="sheet" role="group" aria-label="Gas rate calculator">
+        <header><b>Gas rate</b><span>from the app. Try it.</span></header>
+        <div class="body">
+          <div class="row2">
+            <label>First reading (m³)<input id="c-a" inputmode="decimal" value="4.478" autocomplete="off"></label>
+            <label>Second reading (m³)<input id="c-b" inputmode="decimal" value="4.562" autocomplete="off"></label>
+          </div>
+          <div class="row2">
+            <label>Time taken (min:sec)<input id="c-t" inputmode="decimal" value="2:15" autocomplete="off"></label>
+            <label>CV value (MJ/m³)<input id="c-cv" inputmode="decimal" value="38.76" autocomplete="off"></label>
+          </div>
+          <p id="c-msg" class="sheetnote" style="color:#a33;margin:-4px 0 6px;min-height:0" role="status"></p>
+          <div class="res">
+            <div>Gas rate<span><b id="r-rate">–</b><small>m³/hr</small></span></div>
+            <div>Heat input, gross<span><b id="r-gross">–</b><small>kW</small></span></div>
+            <div class="net">Heat input, net<span><b id="r-net">–</b><small>kW</small></span></div>
+          </div>
+        </div>
+      </div>
+      <p class="sheetnote">In the app you press Start and Stop on a timer, and the result goes straight into the form.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="forms">
+  <div class="wrap two">
+    <div>
+      <h2>The forms you actually fill in</h2>
+      <p>Tick everything you are doing at a property today. Enter the customer and address once, and they are used on every form. You get a separate PDF for each.</p>
+    </div>
+    <ul class="forms">
+      <li><span class="tick" aria-hidden="true"></span><div><b>Gas safety record</b><span>The landlord gas safety check.</span></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><b>Boiler service record</b><span>Service or repair of a gas boiler, with flue gas analyser readings.</span></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><b>Legionella risk assessment</b><span>Hot and cold water system checks.</span></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><b>Air conditioning commissioning</b><span>Install and commissioning report.</span></div></li>
+      <li><span class="tick" aria-hidden="true"></span><div><b>Warning notice</b><span>Filled in on the spot when a defect needs one.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s">
+  <div class="wrap">
+    <h2>Built for the van, not the office</h2>
+    <div class="points">
+      <div><h3>Calculators built in</h3><p>A gas rate calculator for timed meter tests, metric or imperial, with gross and net heat input to check against the data plate. A timer for the tightness test, so the result fills in as you go.</p></div>
+      <div><h3>Simple invoices</h3><p>Make one from a finished job with your standard prices already in. Type a client name and pick them from your saved customers. Send the PDF, mark it sent and paid, and print a summary for your accountant.</p></div>
+      <div><h3>Your name on everything</h3><p>Add your logo and business details once. They appear in the app and on every PDF, so the paperwork looks like yours.</p></div>
+      <div><h3>Works with no signal</h3><p>Cellars and plant rooms are fine. Everything works offline and syncs when you are back online. Add it to your home screen and it opens like any other app.</p></div>
+      <div><h3>Customers and past jobs</h3><p>Keep your customers and their properties. Open any past job and its PDF again, and copy details from the last visit instead of retyping.</p></div>
+      <div><h3>Your records stay yours</h3><p>Save a backup file whenever you like, with a password if you want one. The app reminds you once a month.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="screens">
+  <div class="wrap">
+    <h2>What it looks like</h2>
+    <div class="shots">
+      <figure class="shot"><img src="img/shot-1.png" width="750" height="1500" alt="The records screen with buttons to start each type of form"><figcaption>Pick the job. Start the forms.</figcaption></figure>
+      <figure class="shot"><img src="img/shot-2.png" width="750" height="1500" alt="The gas rate calculator showing gross and net heat input"><figcaption>Time the meter. Get the heat input.</figcaption></figure>
+      <figure class="shot"><img src="img/shot-3.png" width="750" height="1500" alt="An invoice being created with a client suggested as you type"><figcaption>Type a name. Pick the customer.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap">
+    <div class="big">£15<small>a month</small></div>
+    <div>
+      <ul>
+        <li>14 days free to try it</li>
+        <li>Every form, calculator and invoice feature</li>
+        <li>Your own logo and details on all your PDFs</li>
+        <li>Cancel any time from Settings</li>
+      </ul>
+      <a class="btn" href="https://app.ombgas.com/">Start your free trial</a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="faq" style="border-top:0">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details><summary>Do I need a signal?</summary><p>No. The forms, calculators and invoices all work offline. Your work syncs to your account when you are back online.</p></details>
+    <details><summary>What phone do I need?</summary><p>Any iPhone or Android phone with a normal browser. Open the app, choose “Add to Home Screen”, and it opens full screen like any other app.</p></details>
+    <details><summary>Where is my data kept?</summary><p>On your phone first, and backed up to your account whenever you are online. You can also save a backup file yourself at any time.</p></details>
+    <details><summary>Is it approved by the Gas Safe Register?</summary><p>No. OMB Gas Service is independent and is not affiliated with the Gas Safe Register. You are still responsible for the checks you carry out and for what you sign.</p></details>
+    <details><summary>What happens if I cancel?</summary><p>You can cancel any time from Settings. If your subscription ends, you can still view, download and export your records.</p></details>
+    <details><summary>Something is not working, or I have an idea.</summary><p>Use Send feedback in the app’s Settings, or email <a href="mailto:support@ombgas.com">support@ombgas.com</a>.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>OMB Gas Service. Not affiliated with the Gas Safe Register.</div>
+    <div><a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a> &nbsp; <a href="mailto:support@ombgas.com">support@ombgas.com</a></div>
+  </div>
+</footer>
+<script src="calc.js"></script>
+</body>
+</html>
