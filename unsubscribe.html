@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unsubscribe – OMB Gas Service</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="./"><img src="img/icon-192.png" alt="">OMB Gas Service</a></div></header>
+<main><section class="wrap legal">
+<h1>Unsubscribe</h1>
+<p id="msg" role="status">One moment…</p>
+<p class="upd">This stops annual check reminder emails to your address from every engineer who uses OMB Gas Service. Your gas engineer can still contact you about your appliance in other ways.</p>
+</section></main>
+<footer><div class="wrap"><div>OMB Gas Service. Not affiliated with the Gas Safe Register.</div><div><a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a> &nbsp; <a href="mailto:support@ombgas.com">support@ombgas.com</a></div></div></footer>
+<script>
+(function(){
+  var m=document.getElementById('msg'),t=new URLSearchParams(location.search).get('t')||'';
+  if(!/^[0-9a-f-]{36}$/i.test(t)){m.textContent='This unsubscribe link is not complete. Please use the link in the email, or email support@ombgas.com and we will do it for you.';return;}
+  fetch('https://klgscnjbjglwrdqucufg.supabase.co/functions/v1/reminders?action=unsub&t='+encodeURIComponent(t),{method:'POST'})
+    .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+    .then(function(x){m.textContent=x.ok&&x.j.ok?'Done. You will not get any more reminder emails from us.':'Sorry, that did not work: '+(x.j&&x.j.error?x.j.error:'please try again')+'. You can email support@ombgas.com and we will do it for you.';})
+    .catch(function(){m.textContent='Sorry, we could not reach the server. Please try again, or email support@ombgas.com and we will do it for you.';});
+})();
+</script>
+</body></html>
