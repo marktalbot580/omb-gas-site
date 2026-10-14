@@ -267,3 +267,13 @@ footer a:hover{color:var(--gold2)}
 @media(max-width:1000px){.toolgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.toolgrid{grid-template-columns:1fr}.tool{padding:22px}.chips li{font-size:14px;padding:9px 14px}}
 @media(prefers-reduced-motion:reduce){.js .toolgrid.rv>*{opacity:1!important;transform:none!important}}
+
+/* hero phone: swipeable reel of app screens */
+.reel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:27px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.reel::-webkit-scrollbar{display:none}
+.reel img{flex:0 0 100%;scroll-snap-align:center;width:100%;height:auto;border-radius:0}
+.reel:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.dots{display:flex;justify-content:center;gap:0;margin-top:18px}
+.dots button{width:18px;height:28px;border:0;background:none;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--line2);transition:background .25s,transform .25s}
+.dots button[aria-current]::before{background:var(--gold);transform:scale(1.35)}
